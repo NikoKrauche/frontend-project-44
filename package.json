@@ -7,6 +7,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "author": "NikoKrauche",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "make": "^0.8.1"
+  }
 }
