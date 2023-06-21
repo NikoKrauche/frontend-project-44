@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-/* eslint-disable import/extensions */
-import name from '../src/cli.js';
+import welcomeUser from '../src/cli.js';
 
-console.log(`${'Hello, '}${name}!`);
+console.log(welcomeUser);
