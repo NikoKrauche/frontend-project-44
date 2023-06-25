@@ -14,6 +14,8 @@ for (let i = 0; i < getRandomInt.length; i += 1) {
   getRandomInt[i] = Math.floor(Math.random() * (maxNumInArr - minNumInArr)) + minNumInArr;
 }
 
+const userWinMessage = `${'Congratulations, '}${`${name}!`}`;
+
 const gameNumberisEven = (arr = getRandomInt) => {
   let result = '';
   for (let i = 0; i <= arr.length - 1; i += 1) {
@@ -23,13 +25,11 @@ const gameNumberisEven = (arr = getRandomInt) => {
       result = console.log('Correct!');
     } else {
       const correctAnswer = arr[i] % 2 === 0 ? 'yes' : 'no';
-      i = 0;
-      const userLoseMessage = console.log(`${`'${answerUser}'`}${'is wrong answer ;(. Correct answer was '}${`'${correctAnswer}'`}.}\n${'Let\'s try again, '}${`${name}!`}`);
-      return userLoseMessage;
+      const userLoseMessage = `${`'${answerUser}'`}${'is wrong answer ;(. Correct answer was '}${`'${correctAnswer}'`}.}\n${'Let\'s try again, '}${`${name}!`}`;
+      return console.log(userLoseMessage);
     }
     if (i >= arr.length - 1) {
-      const userWinMessage = console.log(`${'Congratulations, '}${`${name}!`}`);
-      result = userWinMessage;
+      result = console.log(userWinMessage);
     }
   }
   return result;
