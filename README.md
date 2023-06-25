@@ -3,3 +3,6 @@
 
 ### Maintainability
 [Breakdown](https://codeclimate.com/github/NikoKrauche/frontend-project-44)
+
+### Asciinema
+[Brain-even](https://asciinema.org/a/NAldZtGO729uVRWV5Da5bIo7p)
