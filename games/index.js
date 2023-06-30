@@ -5,10 +5,11 @@ console.log(welcomeUser);
 const startGameMessageEven = `${'Answer "yes" if the number is even, otherwise answer "no".'}`;
 const startGameMessageCalc = `${'What is the result of the expression?'}`;
 const startGameMassageGcd = `${'Find the greatest common divisor of given numbers.'}`;
+const startGameProgression = `${'What number is missing in the progression?'}`;
 const userWinMessage = `${'Congratulations, '}${`${name}!`}`;
 
 const maxRoundsGame = 3;
-const minNumInArr = 50;
+const minNumInArr = 1;
 const maxNumInArr = 101;
 const getRandomIntArr01 = [...Array(maxRoundsGame)];
 for (let i = 0; i < getRandomIntArr01.length; i += 1) {
@@ -84,6 +85,46 @@ export const gameFindGcd = (arr = getRandomIntArr01) => {
       console.log('Correct!');
     } else {
       const correctAnswer = gcd(getRandomIntArr01[i], getRandomIntArr02[i]);
+      const userLoseMessage = `${`'${answerUser}'`} ${'is wrong answer ;(. Correct answer was '}${`'${correctAnswer}'`}.}\n${'Let\'s try again, '}${`${name}!`}`;
+      return userLoseMessage;
+    }
+    if (i >= arr.length - 1) {
+      result = userWinMessage;
+    }
+  }
+  return result;
+};
+
+const progressionLength = 10;
+const arrHidenElement = [...Array(maxRoundsGame)];
+for (let i = 0; i < arrHidenElement.length; i += 1) {
+  arrHidenElement[i] = Math.floor(Math.random() * ((progressionLength - 1) - 1) + 1);
+}
+
+export const gameProgression = (arr = getRandomIntArr01) => {
+  console.log(startGameProgression);
+  let result = '';
+
+  for (let i = 0; i <= arr.length - 1; i += 1) {
+    let arrProgression = [];
+    const progression = () => {
+      const getProgressStep = Math.floor(Math.random() * (5 - 1)) + 1;
+      for (let j = 0; j < getProgressStep * progressionLength; j += getProgressStep) {
+        arrProgression.push(getRandomIntArr01[i] + j);
+      }
+      return arrProgression;
+    };
+    progression();
+    const arrWithHiddenElement = [...arrProgression];
+    arrWithHiddenElement[arrHidenElement[i]] = '..';
+
+    const answerUser = readlineSync.question(`${`${'Question: '}${arrWithHiddenElement}`}\nYour answer: `);
+
+    if (arrProgression[arrHidenElement[i]] === +(answerUser)) {
+      console.log('Correct!');
+      arrProgression = [];
+    } else {
+      const correctAnswer = arrProgression[arrHidenElement[i]];
       const userLoseMessage = `${`'${answerUser}'`} ${'is wrong answer ;(. Correct answer was '}${`'${correctAnswer}'`}.}\n${'Let\'s try again, '}${`${name}!`}`;
       return userLoseMessage;
     }
