@@ -6,6 +6,7 @@ const startGameMessageEven = `${'Answer "yes" if the number is even, otherwise a
 const startGameMessageCalc = `${'What is the result of the expression?'}`;
 const startGameMassageGcd = `${'Find the greatest common divisor of given numbers.'}`;
 const startGameProgression = `${'What number is missing in the progression?'}`;
+const startGameIsPrime = `${'Answer "yes" if given number is prime. Otherwise answer "no".'}`;
 const userWinMessage = `${'Congratulations, '}${`${name}!`}`;
 
 const maxRoundsGame = 3;
@@ -16,21 +17,21 @@ for (let i = 0; i < getRandomNum.length; i += 1) {
   getRandomNum[i] = Math.floor(Math.random() * (maxNumInArr - minNumInArr)) + minNumInArr;
 }
 
-export const gameNumberisEven = (arr = getRandomNum) => {
+export const gameNumberisEven = () => {
   console.log(startGameMessageEven);
   let result = '';
 
   for (let i = 0; i <= maxRoundsGame - 1; i += 1) {
     const answerUser = readlineSync.question(`${`${'Question: '}${getRandomNum[i]}`}\nYour answer: `);
 
-    if (((arr[i] % 2 === 0) && answerUser === 'yes') || ((arr[i] % 2 !== 0) && answerUser === 'no')) {
+    if (((getRandomNum[i] % 2 === 0) && answerUser === 'yes') || ((getRandomNum[i] % 2 !== 0) && answerUser === 'no')) {
       console.log('Correct!');
     } else {
-      const correctAnswer = arr[i] % 2 === 0 ? 'yes' : 'no';
+      const correctAnswer = getRandomNum[i] % 2 === 0 ? 'yes' : 'no';
       const userLoseMessage = `${`'${answerUser}'`} ${'is wrong answer ;(. Correct answer was '}${`'${correctAnswer}'`}.}\n${'Let\'s try again, '}${`${name}!`}`;
       return userLoseMessage;
     }
-    if (i >= (maxRoundsGame - 1)) {
+    if (i >= maxRoundsGame - 1) {
       result = userWinMessage;
     }
   }
@@ -83,7 +84,7 @@ export const gameFindGcd = () => {
       const userLoseMessage = `${`'${answerUser}'`} ${'is wrong answer ;(. Correct answer was '}${`'${correctAnswer}'`}.}\n${'Let\'s try again, '}${`${name}!`}`;
       return userLoseMessage;
     }
-    if (i >= maxRoundsGame) {
+    if (i >= maxRoundsGame - 1) {
       result = userWinMessage;
     }
   }
@@ -120,6 +121,34 @@ export const gameProgression = () => {
       arrProgression = [];
     } else {
       const correctAnswer = arrProgression[arrHidenElement[i]];
+      const userLoseMessage = `${`'${answerUser}'`} ${'is wrong answer ;(. Correct answer was '}${`'${correctAnswer}'`}.}\n${'Let\'s try again, '}${`${name}!`}`;
+      return userLoseMessage;
+    }
+    if (i >= maxRoundsGame - 1) {
+      result = userWinMessage;
+    }
+  }
+  return result;
+};
+
+export const gameIsPrime = () => {
+  console.log(startGameIsPrime);
+  let result = '';
+
+  for (let i = 0; i <= maxRoundsGame - 1; i += 1) {
+    const isPrime = (num) => {
+      for (let j = 2; j < num; j += 1) {
+        if (num % j === 0) return false;
+      }
+      return num !== 1;
+    };
+
+    const answerUser = readlineSync.question(`${`${'Question: '}${getRandomNum[i]}`}\nYour answer: `);
+
+    if ((isPrime(getRandomNum[i]) && answerUser === 'yes') || (!isPrime(getRandomNum[i]) && answerUser === 'no')) {
+      console.log('Correct!');
+    } else {
+      const correctAnswer = isPrime(getRandomNum[i]) ? 'yes' : 'no';
       const userLoseMessage = `${`'${answerUser}'`} ${'is wrong answer ;(. Correct answer was '}${`'${correctAnswer}'`}.}\n${'Let\'s try again, '}${`${name}!`}`;
       return userLoseMessage;
     }

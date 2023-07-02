@@ -9,3 +9,4 @@
 [Brain-calc](https://asciinema.org/a/M19LdwWmgrd6GYEfbXRzjFLuP)
 [Brain-gcd](https://asciinema.org/a/MaScYWOxmDfpbjR6mEcBzqlgA)
 [Brain-progression]( https://asciinema.org/a/gUolR02yaBQhkQhLEjWFTnoBE)
+[Braimn-prime](https://asciinema.org/a/LG4ZQPR1tuQuhJZSVyQyQTGHo)
