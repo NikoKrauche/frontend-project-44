@@ -114,7 +114,7 @@ export const gameProgression = () => {
     const arrWithHiddenElement = [...arrProgression];
     arrWithHiddenElement[arrHidenElement[i]] = '..';
 
-    const answerUser = readlineSync.question(`${`${'Question: '}${arrWithHiddenElement}`}\nYour answer: `);
+    const answerUser = readlineSync.question(`${`${'Question: '}${arrWithHiddenElement.join(' ')}`}\nYour answer: `);
 
     if (arrProgression[arrHidenElement[i]] === +(answerUser)) {
       console.log('Correct!');
