@@ -2,5 +2,3 @@
 import readlineSync from 'readline-sync';
 
 const name = readlineSync.question('May I have name? ');
-console.log('Welcome to the Brain Games!');
-console.log(`${'Hello, '}${name}!`);
