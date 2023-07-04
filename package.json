@@ -2,8 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/NikoKrauche/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/NikoKrauche/frontend-project-44/actions)",
-  "main": "index.js",
+  "description": "A set of five simple math games",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,10 +14,7 @@
     "brain-progression": "bin/brain-progression.js",
     "brain-prime": "bin/brain-prime.js"
   },
-  "author": "NikoKrauche",
-  "license": "ISC",
   "dependencies": {
-    "make": "^0.8.1",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
