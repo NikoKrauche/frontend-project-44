@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import { gameNumberisEven } from '../games/index.js';
+import gameEngine from '../src/index.js';
+import gameNumberisEven from '../games/even.js';
 
-console.log(gameNumberisEven());
+gameEngine(gameNumberisEven);
