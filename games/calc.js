@@ -1,13 +1,13 @@
 import getRandomNum from '../src/getRandomNum.js';
 
-const mathOperations = (num1, operator, num2) => {
+const mathOperations = (x, operator, y) => {
   switch (operator) {
     case '+':
-      return num1 + num2;
+      return x + y;
     case '-':
-      return num1 - num2;
+      return x - y;
     case '*':
-      return num1 * num2;
+      return x * y;
     default:
       return null;
   }
