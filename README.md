@@ -18,7 +18,7 @@ npm link
 
 [![asciinema](https://gravatar.com/avatar/0b5be33f3e4e1f683cacfe572991cdd8?s=128&d=retro)](https://asciinema.org/~NikoKrauch)
 ***
-* [Brain-even](https://asciinema.org/a/NAldZtGO729uVRWV5Da5bIo7p)
+* [Brain-even](https://asciinema.org/a/Hxi6ayO7NH8GTq4KW1VrWFIqV)
  Игра: "Проверка на чётность"
  Команда: ```Brain-even```
 
