@@ -4,7 +4,7 @@ const isPrime = (firstNum) => {
   for (let i = 2; i < firstNum; i += 1) {
     if (firstNum % i === 0) return false;
   }
-  return firstNum !== 1;
+  return true;
 };
 
 const gamePrime = () => {
