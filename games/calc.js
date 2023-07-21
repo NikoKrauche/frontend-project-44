@@ -1,4 +1,5 @@
 import getRandomNum from '../src/getRandomNum.js';
+import startEngine from '../src/index.js';
 
 const mathOperations = (x, operator, y) => {
   switch (operator) {
@@ -24,4 +25,8 @@ const gameCalc = () => {
   return [startGameMessage, question, correctAnswer];
 };
 
-export default gameCalc;
+const startGame = () => {
+  startEngine(gameCalc);
+};
+
+export default startGame;

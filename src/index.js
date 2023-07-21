@@ -3,7 +3,7 @@ import { welcomeUser, name } from './cli.js';
 
 const maxRoundsGame = 3;
 
-const gameEngine = (game) => {
+const startEngine = (game) => {
   console.log(welcomeUser);
 
   for (let i = 0; i < maxRoundsGame; i += 1) {
@@ -21,4 +21,4 @@ const gameEngine = (game) => {
   console.log(`Congratulations, ${name}!`);
 };
 
-export default gameEngine;
+export default startEngine;
