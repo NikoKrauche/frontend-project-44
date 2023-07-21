@@ -1,26 +1,32 @@
-import getRandomNum from '../src/getRandomNum.js';
+import getRandomNumber from '../getRandomNumber.js';
+import startEngine from '../index.js';
 
-const getProgression = (firstNum, stepProgression) => {
-  const progressionLength = 10 * stepProgression + firstNum;
+const description = 'What number is missing in the progression?';
+
+const getProgression = (number, stepProgression) => {
+  const progressionLength = 10 * stepProgression + number;
   const arr = [];
-  for (let i = firstNum; i < progressionLength; i += stepProgression) {
+  for (let i = number; i < progressionLength; i += stepProgression) {
     arr.push(i);
   }
   return arr;
 };
 
 const gameProgression = () => {
-  const startGameMessage = 'What number is missing in the progression?';
-  const firstNum = getRandomNum(1, 51);
-  const stepProgression = getRandomNum(1, 5);
-  const progression = getProgression(firstNum, stepProgression);
-  const getHiddenElement = getRandomNum(0, progression.length - 1);
+  const number = getRandomNumber(1, 51);
+  const stepProgression = getRandomNumber(1, 5);
+  const progression = getProgression(number, stepProgression);
+  const getHiddenElement = getRandomNumber(0, progression.length - 1);
 
   const correctAnswer = String(progression[getHiddenElement]);
   progression[getHiddenElement] = '..';
   const question = progression.join(' ');
 
-  return [startGameMessage, question, correctAnswer];
+  return [question, correctAnswer];
 };
 
-export default gameProgression;
+const startGame = () => {
+  startEngine(description, gameProgression);
+};
+
+export default startGame;
