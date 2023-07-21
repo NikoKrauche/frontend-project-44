@@ -1,12 +1,9 @@
+[![Actions Status](https://github.com/NikoKrauche/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/NikoKrauche/frontend-project-44/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/58f8a861596513e829d7/maintainability)](https://codeclimate.com/github/NikoKrauche/frontend-project-44/maintainability)
+
 # Brain-games
 
 > «Игры разума» — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново.
-
-
-## Hexlet tests, linter status and CodeClimate Maintainability:
-
-[![Actions Status](https://github.com/NikoKrauche/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/NikoKrauche/frontend-project-44/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/58f8a861596513e829d7/maintainability)](https://codeclimate.com/github/NikoKrauche/frontend-project-44/maintainability)
 
 ## Setup
 ```
@@ -22,7 +19,7 @@ npm link
  Игра: "Проверка на чётность"
  Команда: ```Brain-even```
 
-* [Brain-calc](https://asciinema.org/a/M19LdwWmgrd6GYEfbXRzjFLuP)
+* [Brain-calc](https://asciinema.org/a/g2xFJlHygEXG8TDUoyZzhHFmu)
  Игра: "Калькулятор"
  Команда: ```Brain-calc```
 
