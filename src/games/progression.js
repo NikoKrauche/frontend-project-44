@@ -12,7 +12,7 @@ const getProgression = (number, stepProgression) => {
   return arr;
 };
 
-const gameProgression = () => {
+const gerenerateRound = () => {
   const number = getRandomNumber(1, 51);
   const stepProgression = getRandomNumber(1, 5);
   const progression = getProgression(number, stepProgression);
@@ -26,7 +26,7 @@ const gameProgression = () => {
 };
 
 const startGame = () => {
-  startEngine(description, gameProgression);
+  startEngine(description, gerenerateRound);
 };
 
 export default startGame;

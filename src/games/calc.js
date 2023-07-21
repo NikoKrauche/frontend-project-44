@@ -16,7 +16,7 @@ const calculate = (x, operator, y) => {
   }
 };
 
-const gameCalc = () => {
+const gerenerateRound = () => {
   const operator = ['+', '-', '*'];
   const number1 = getRandomNumber(1, 26);
   const number2 = getRandomNumber(1, 11);
@@ -27,7 +27,7 @@ const gameCalc = () => {
 };
 
 const startGame = () => {
-  startEngine(description, gameCalc);
+  startEngine(description, gerenerateRound);
 };
 
 export default startGame;

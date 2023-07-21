@@ -3,12 +3,12 @@ import { welcomeUser, name } from './cli.js';
 
 const roundsCount = 3;
 
-const startEngine = (description, game) => {
+const startEngine = (description, gerenerateRound) => {
   console.log(welcomeUser);
   console.log(description);
 
   for (let i = 0; i < roundsCount; i += 1) {
-    const [question, correctAnswer] = game();
+    const [question, correctAnswer] = gerenerateRound();
     console.log(`Question: ${question}`);
     const answerUser = readlineSync.question('Your answer: ');
 

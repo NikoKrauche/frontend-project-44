@@ -10,14 +10,14 @@ const isPrime = (number) => {
   return true;
 };
 
-const gamePrime = () => {
+const gerenerateRound = () => {
   const question = getRandomNumber(2, 51);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
 const startGame = () => {
-  startEngine(description, gamePrime);
+  startEngine(description, gerenerateRound);
 };
 
 export default startGame;

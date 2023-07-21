@@ -9,7 +9,7 @@ const findGcd = (x, y) => {
   return findGcd(y, x % y);
 };
 
-const gameFindGcd = () => {
+const gerenerateRound = () => {
   const number1 = getRandomNumber(2, 51);
   const number2 = getRandomNumber(2, 51);
   const question = `${number1} ${number2}`;
@@ -18,7 +18,7 @@ const gameFindGcd = () => {
 };
 
 const startGame = () => {
-  startEngine(description, gameFindGcd);
+  startEngine(description, gerenerateRound);
 };
 
 export default startGame;
