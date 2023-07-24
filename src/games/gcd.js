@@ -13,8 +13,8 @@ const gerenerateRound = () => {
   const number1 = getRandomNumber(2, 51);
   const number2 = getRandomNumber(2, 51);
   const question = `${number1} ${number2}`;
-  const correctAnswer = String(findGcd(number1, number2));
-  return [question, correctAnswer];
+  const answer = String(findGcd(number1, number2));
+  return [question, answer];
 };
 
 const startGame = () => {
