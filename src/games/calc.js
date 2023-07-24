@@ -3,8 +3,8 @@ import startEngine from '../index.js';
 
 const description = 'What is the result of the expression?';
 
-const calculate = (x, y, operators) => {
-  switch (operators) {
+const calculate = (x, y, operator) => {
+  switch (operator) {
     case '+':
       return x + y;
     case '-':
@@ -12,7 +12,7 @@ const calculate = (x, y, operators) => {
     case '*':
       return x * y;
     default:
-      throw new Error(`Unknown operator or operands: '${x}, ${y}, ${operators}'!`);
+      throw new Error(`Unknown operator or operands: '${x}, ${y}, ${operator}'!`);
   }
 };
 
