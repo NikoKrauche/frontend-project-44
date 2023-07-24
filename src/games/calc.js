@@ -3,8 +3,8 @@ import startEngine from '../index.js';
 
 const description = 'What is the result of the expression?';
 
-const calculate = (x, y, operator) => {
-  switch (operator) {
+const calculate = (x, y, operators) => {
+  switch (operators) {
     case '+':
       return x + y;
     case '-':
@@ -12,18 +12,18 @@ const calculate = (x, y, operator) => {
     case '*':
       return x * y;
     default:
-      return null;
+      throw new Error(`Unknown operator or operands: '${x}, ${y}, ${operators}'!`);
   }
 };
 
 const gerenerateRound = () => {
-  const operator = ['+', '-', '*'];
+  const operators = ['+', '-', '*'];
   const number1 = getRandomNumber(1, 26);
   const number2 = getRandomNumber(1, 11);
-  const randomOperator = operator[getRandomNumber(0, operator.length - 1)];
+  const randomOperator = operators[getRandomNumber(0, operators.length - 1)];
   const question = `${number1} ${randomOperator} ${number2}`;
-  const correctAnswer = String(calculate(number1, number2, randomOperator));
-  return [question, correctAnswer];
+  const answer = String(calculate(number1, number2, randomOperator));
+  return [question, answer];
 };
 
 const startGame = () => {
